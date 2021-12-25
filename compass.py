@@ -12,6 +12,9 @@ def direction(facing, turn):
         'NW' : 315
     }
     
+    if type(turn) != int:
+      raise Exception("Sorry, degrees must be integers")
+    
     if turn < -1080 or turn > 1080:
         raise Exception("Sorry, the turn must be between -1080 and 1080 degrees")
 
